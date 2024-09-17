@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Chat House</string>
+
+    <!-- Navigation Drawer Strings -->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <!-- Navigation Menu items -->
+    <string name="personal">Personal</string>
+    <string name="chats">Chats</string>
+    <string name="people">People On ChatHouse</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="empty_user">Username is required</string>
+    <string name="empty_unique">Required for Login</string>
+    <string name="empty_phone">Required for Verification</string>
+    <string name="empty_phone_number">Required for Login</string>
+    <string name="empty_login_password">Required Password to Verify</string>
+    <string name="invalid_phone">Invalid Phone Number</string>
+    <string name="empty_password">Required for Security</string>
+    <string name="empty_otp">Required OTP</string>
+
+    <string name="acc_exists">Phone Number is used</string>
+
+    <string name="missing_number">Required atleast 1 number</string>
+    <string name="missing_small">Required atleast 1 small Letter</string>
+    <string name="missing_caps">Required atleast 1 capital Letter</string>
+    <string name="missing_symbol">Required atleast 1 Special Character</string>
+    <string name="missing_length">Password Length must greater than 8</string>
+    <string name="missing_unique_length">Length must greater than 5</string>
+
+    <string name="mismatch">Password Mismatch</string>
+
+
+</resources>

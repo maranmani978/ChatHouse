@@ -1,0 +1,48 @@
+package com.murugamani.example.chathouse.Adapters;
+
+import android.app.Activity;
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import com.murugamani.example.chathouse.ChatHouseUsers;
+import com.murugamani.example.chathouse.R;
+
+import java.util.List;
+
+/**
+ * Created by Murugamani on 3/6/2018.
+ */
+
+public class FriendAdapter extends ArrayAdapter<ChatHouseUsers> {
+
+    public FriendAdapter(@NonNull Context context, @NonNull List<ChatHouseUsers> objects) {
+        super(context,0, objects);
+    }
+
+
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        if (convertView == null){
+            convertView = ((Activity)getContext()).getLayoutInflater().inflate(R.layout.list_chat_people_item,parent,false);
+        }
+
+        ChatHouseUsers chatHouseUsers = getItem(position);
+
+        TextView nameTextView = convertView.findViewById(R.id.users_name);
+        TextView mailTextView = convertView.findViewById(R.id.users_mail);
+        TextView idTextView = convertView.findViewById(R.id.user_id);
+
+        nameTextView.setText(chatHouseUsers.getPerson_name());
+        mailTextView.setText(chatHouseUsers.getUser_phone_number());
+        idTextView.setText(chatHouseUsers.getUser_id());
+
+        return convertView;
+    }
+
+}

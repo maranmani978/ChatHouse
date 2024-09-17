@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#92b48c"
+    tools:context="com.murugamani.example.chathouse.ChatActivity">
+
+    <ListView
+        android:id="@+id/chat_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stackFromBottom="true"
+        android:divider="@null"
+        android:dividerHeight="1dp"
+        android:paddingTop="10dp"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@+id/create_chat" />
+
+    <LinearLayout
+        android:id="@+id/create_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="5"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp">
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/pics" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp">
+
+            <EditText
+                android:id="@+id/message_writer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:hint="Type Something here..."
+                android:background="@drawable/writer_style"
+                android:maxHeight="150dp"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/send_message"
+            android:background="@null"
+            android:src="@drawable/send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
